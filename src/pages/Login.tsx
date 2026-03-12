@@ -65,7 +65,7 @@ const Login = () => {
           </div>
 
           <p className="text-center text-sm text-muted-foreground underline cursor-pointer">
-            Forgot password?
+           
           </p>
         </form>
       </div>
