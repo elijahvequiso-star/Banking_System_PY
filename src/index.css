@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 50% 95%;
+    --foreground: 220 60% 15%;
+
+    --card: 210 60% 85%;
+    --card-foreground: 220 60% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 15%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 55% 88%;
+    --secondary-foreground: 220 60% 15%;
+
+    --muted: 210 40% 90%;
+    --muted-foreground: 220 15% 40%;
+
+    --accent: 45 100% 55%;
+    --accent-foreground: 220 60% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 80%;
+    --input: 210 30% 82%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 70% 45%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 60% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 50% 60%;
+    --sidebar-ring: 220 70% 50%;
+
+    /* Custom banking tokens */
+    --banking-blue: 220 70% 50%;
+    --banking-blue-dark: 220 75% 35%;
+    --banking-blue-light: 210 60% 85%;
+    --banking-header: 220 72% 42%;
+    --banking-card-bg: 210 60% 88%;
+    --banking-gold: 45 100% 55%;
+    --banking-gradient: linear-gradient(135deg, hsl(220 75% 35%), hsl(220 70% 55%));
+  }
+
+  .dark {
+    --background: 220 60% 8%;
+    --foreground: 210 40% 95%;
+    --card: 220 50% 14%;
+    --card-foreground: 210 40% 95%;
+    --primary: 220 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 220 60% 10%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 220 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .banking-gradient {
+    background: linear-gradient(135deg, hsl(220 75% 35%), hsl(220 70% 55%));
+  }
+  .banking-gradient-light {
+    background: linear-gradient(135deg, hsl(210 60% 90%), hsl(210 55% 82%));
+  }
+  .banking-card {
+    @apply rounded-2xl shadow-lg;
+    background: hsl(210 60% 88%);
+  }
+  .banking-header {
+    background: linear-gradient(135deg, hsl(220 72% 42%), hsl(220 65% 55%));
+  }
+}
